@@ -8,8 +8,9 @@ import Validator.IValidator;
 public abstract  class AbstractService <ID,E extends HasId<ID>> {
     private IValidator<E> v;
     private AbstractFileRepository<ID,E> repo;
-    public AbstractService(AbstractFileRepository repo){
-        this.repo=repo;
+
+    public AbstractService(AbstractFileRepository repo) {
+        this.repo = repo;
     }
     //@Override
     public void add(String[] params) throws ValidatorException {

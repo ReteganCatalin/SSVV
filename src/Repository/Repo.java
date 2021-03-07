@@ -39,24 +39,21 @@ public interface Repo<ID,E> {
 
     /**
      * removes the entity with the specified id
-     * @param id
-     * id must be not null
-     * @return the removed entity or null if there is no entity with the given id
-     * @throws IllegalArgumentException
-     * if the given id is null.
-     */
-     E delete(ID id);
-    /**
      *
-     * @param entity
-     * entity must not be null
+     * @param id id must be not null
+     * @return the removed entity or null if there is no entity with the given id
+     * @throws IllegalArgumentException if the given id is null.
+     */
+    E delete(ID id);
+
+    /**
+     * @param entity entity must not be null
      * @return null - if the entity is updated,
      * otherwise returns the entity - (e.g id does not exist).
-     * @throws IllegalArgumentException
-     * if the given entity is null.
-     //* @throws ValidatorException
-     * if the entity is not valid.
+     * @throws IllegalArgumentException if the given entity is null.
+     *                                  //* @throws ValidatorException
+     *                                  if the entity is not valid.
      */
-    E update(E entity) ;
+    E update(E entity);
 
 }

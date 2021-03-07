@@ -19,7 +19,7 @@ public class NotaFileRepo extends AbstractFileRepository {
         Integer idTema = Integer.parseInt(info[2]);
         double valoare = Double.parseDouble(info[3]);
         //TemaLab t=findOne(idTema);
-        LocalDateTime ldt=LocalDateTime.parse(info[4]);
+        LocalDateTime ldt = LocalDateTime.parse(info[4]);
         Nota n = new Nota(idNota, idStudent, idTema, valoare, ldt);
         return n;
     }
