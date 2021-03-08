@@ -237,7 +237,7 @@ public class ui {
                     this.addNota();
                     break;
                 case "6":
-                    //this.printAllNotes();
+                    this.printAllEntities(notaSrv);
                     break;
                 case "7":
                     break label;
@@ -255,4 +255,5 @@ public class ui {
         //}
 
     }
+
 }

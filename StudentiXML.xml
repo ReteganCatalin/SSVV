@@ -1,1 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><inbox><student><id>1</id><nume>1</nume><grupa>1</grupa><email>1</email><profesor>1</profesor></student></inbox>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<inbox>
+    <student>
+        <id>2</id>
+        <nume>2</nume>
+        <grupa>2</grupa>
+        <email>2</email>
+        <profesor>33</profesor>
+    </student>
+</inbox>

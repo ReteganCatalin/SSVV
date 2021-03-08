@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><inbox><tema><id>1</id><descriere>2</descriere><saptamanaLimita>3</saptamanaLimita><saptamanaPredarii>2</saptamanaPredarii></tema><tema><id>5</id><descriere>5</descriere><saptamanaLimita>5</saptamanaLimita><saptamanaPredarii>5</saptamanaPredarii></tema></inbox>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<inbox>
+    <tema>
+        <id>1</id>
+        <descriere>2</descriere>
+        <saptamanaLimita>2</saptamanaLimita>
+        <saptamanaPredarii>3</saptamanaPredarii>
+    </tema>
+</inbox>

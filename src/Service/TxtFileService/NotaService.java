@@ -6,4 +6,6 @@ public class NotaService extends AbstractService<Integer,Nota> {
     public NotaService(NotaFileRepo notaRepo){
         super(notaRepo);
     }
+
+
 }

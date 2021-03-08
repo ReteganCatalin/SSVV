@@ -46,13 +46,14 @@ public abstract class AbstractXMLRepo<ID, E extends HasId<ID>> extends AbstractC
             NodeList children = root.getChildNodes();
             for (int i = 0; i < children.getLength(); i++) {
                 Node entityElement = children.item(i);
-                if (entityElement instanceof Element) {
-                    E e = createEntityFromElement((Element) entityElement);
+                if (entityElement.getNodeType() == Node.ELEMENT_NODE) {
+                    Element eElement = (Element) entityElement;
+                    E e = createEntityFromElement(eElement);
                     super.save(e);
                 }
             }
         } catch (Exception ex) {
-
+            System.out.println(ex);
         }
     }
 

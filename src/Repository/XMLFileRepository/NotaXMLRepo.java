@@ -30,7 +30,10 @@ public class NotaXMLRepo extends AbstractXMLRepo<Integer, Nota> {
 
     @Override
     protected Nota createEntityFromElement(Element notaElement){
-        String id=notaElement.getAttribute("id");
+        String id=notaElement
+                .getElementsByTagName("id")
+                .item(0)
+                .getTextContent();;
         String idStudent=notaElement
                 .getElementsByTagName("idStudent")
                 .item(0)
