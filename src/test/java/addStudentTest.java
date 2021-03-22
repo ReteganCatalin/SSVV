@@ -50,6 +50,106 @@ public class addStudentTest {
     }
 
     @Test
+    public void addStudentNameEmptyTest(){
+        Student student = new Student("2", "", 1, "1", "1");
+
+        try {
+            repository.save(student);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addStudentNameNonEmptyTest(){
+        Student student = new Student("2", "Cata", 1, "1", "1");
+
+        try {
+            repository.save(student);
+            Student check = repository.findOne("2");
+            Assert.assertEquals("Cata", check.getNume());
+        } catch (ValidatorException e) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void addStudentIdEmptyTest(){
+        Student student = new Student("", "Cata", 1, "1", "1");
+
+        try {
+            repository.save(student);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addStudentIdNonEmptyTest(){
+        Student student = new Student("2", "Cata", 1, "1", "1");
+
+        try {
+            repository.save(student);
+            Student check = repository.findOne("2");
+            Assert.assertEquals("Cata", check.getNume());
+        } catch (ValidatorException e) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void addStudentEmailEmptyTest(){
+        Student student = new Student("2", "Cata", 1, "", "1");
+
+        try {
+            repository.save(student);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addStudentGroupMoreThan0Test(){
+        Student student = new Student("2", "Cata", 1, "1", "1");
+
+        try {
+            repository.save(student);
+            Student check = repository.findOne("2");
+            Assert.assertEquals("Cata", check.getNume());
+        } catch (ValidatorException e) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void addStudentGroupLessOrEqual0Test(){
+        Student student = new Student("2", "Cata", 0, "1", "1");
+
+        try {
+            repository.save(student);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addStudentEmailNonEmptyTest(){
+        Student student = new Student("2", "Cata", 1, "1", "1");
+
+        try {
+            repository.save(student);
+            Student check = repository.findOne("2");
+            Assert.assertEquals("Cata", check.getNume());
+        } catch (ValidatorException e) {
+            Assert.fail();
+        }
+    }
+
+    @Test
     public void addStudentGroup0Test(){
         Student student = new Student("2", "Cata", 0, "1", "1");
 
