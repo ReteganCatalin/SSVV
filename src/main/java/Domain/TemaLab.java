@@ -1,11 +1,11 @@
 package Domain;
 
 public class TemaLab implements HasId<Integer> {
-    private int nr;
+    private Integer nr;
     private String descriere;
-    private int termenLimita;
+    private Integer termenLimita;
     // private int saptamanaCurenta;
-    private int saptammanaPredarii;
+    private Integer saptammanaPredarii;
 
     public TemaLab(Integer nr, String descriere, int termenLimita, int saptammanaPredarii) {
         this.setId(nr);
