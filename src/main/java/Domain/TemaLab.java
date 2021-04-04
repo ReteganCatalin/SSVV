@@ -1,7 +1,5 @@
 package Domain;
 
-import Domain.HasId;
-
 public class TemaLab implements HasId<Integer> {
     private int nr;
     private String descriere;
@@ -9,7 +7,7 @@ public class TemaLab implements HasId<Integer> {
     // private int saptamanaCurenta;
     private int saptammanaPredarii;
 
-    public TemaLab(int nr, String descriere, int termenLimita, int saptammanaPredarii) {
+    public TemaLab(Integer nr, String descriere, int termenLimita, int saptammanaPredarii) {
         this.setId(nr);
         this.setDescriere(descriere);
         this.setTermenLimita(termenLimita);

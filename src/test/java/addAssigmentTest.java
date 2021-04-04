@@ -43,4 +43,105 @@ public class addAssigmentTest {
             Assert.fail();
         }
     }
+
+    @Test
+    public void addAssigmentIdFailsTest() {
+        TemaLab temaLab = new TemaLab(null, "description", 3, 2);
+
+        try {
+            repository.save(temaLab);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addAssigmentDescriptionFailsNullTest() {
+        TemaLab temaLab = new TemaLab(1, null, 3, 2);
+
+        try {
+            repository.save(temaLab);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addAssigmentDescriptionFailsEmptyTest() {
+        TemaLab temaLab = new TemaLab(1, "", 3, 2);
+
+        try {
+            repository.save(temaLab);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+
+    @Test
+    public void addAssigmentSaptamanaPredariiFails0Test() {
+        TemaLab temaLab = new TemaLab(1, "description", 0, 2);
+
+        try {
+            repository.save(temaLab);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addAssigmentSaptamanaPredariiFails15Test() {
+        TemaLab temaLab = new TemaLab(1, "description", 15, 2);
+
+        try {
+            repository.save(temaLab);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+
+    @Test
+    public void addAssigmentTermenLimitaFails0Test() {
+        TemaLab temaLab = new TemaLab(1, "description", 1, 0);
+
+        try {
+            repository.save(temaLab);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addAssigmentTermenLimitaFails15Test() {
+        TemaLab temaLab = new TemaLab(1, "description", 1, 15);
+
+        try {
+            repository.save(temaLab);
+            Assert.fail();
+        } catch (IllegalArgumentException | ValidatorException e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void addAssigmentDescriptionValidTest() {
+        TemaLab temaLab = new TemaLab(1, "description", 12, 10);
+
+        try {
+            repository.save(temaLab);
+            TemaLab check = repository.findOne(1);
+            Assert.assertEquals("description", check.getDescriere());
+        } catch (ValidatorException e) {
+            Assert.fail();
+        }
+    }
+
+
 }
