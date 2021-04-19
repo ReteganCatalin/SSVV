@@ -85,7 +85,7 @@ public class addGradeTest {
     }
 
     @Test
-    public void addIncrementalAssigmentTest() {
+    public void addIncrementalAssignmentTest() {
         addStudentTest();
         addAssigmentTest();
     }
