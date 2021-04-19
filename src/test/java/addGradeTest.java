@@ -78,4 +78,22 @@ public class addGradeTest {
         addStudentTest();
         addGradeTest();
     }
+
+    @Test
+    public void addIncrementalStudentTest() {
+        addStudentTest();
+    }
+
+    @Test
+    public void addIncrementalAssigmentTest() {
+        addStudentTest();
+        addAssigmentTest();
+    }
+
+    @Test
+    public void addIncrementalGradeTest() {
+        addStudentTest();
+        addAssigmentTest();
+        addGradeTest();
+    }
 }
